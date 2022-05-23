@@ -6,42 +6,67 @@
 }
 /* COMMON */
 .card_container {
+  height: 98%;
   width: 90%;
   margin: 0 auto;
 }
 .trip_card {
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
 }
 .card_columns {
   display: flex;
   flex-direction: column;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 .card_col {
   padding: 1rem;
-  /* Test */
-  border: 1px dotted red;
 }
 ul {
   list-style-type: none;
 }
+li > * {
+  padding-right: 0.2rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .check_tick {
   color: black;
 }
+.offer_btn {
+  background-color: #f2b203;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-weight: 800;
+  margin: 1rem 0;
+}
+.text_bold {
+  font-weight: 800;
+}
+.text_red {
+  color: red;
+}
 /* CARD IMG */
 .img_container {
-  height: 30vh;
+  height: 200px;
   width: 100%;
 }
 .img_container img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 /* Info Col */
 .info_col {
   order: 1;
+}
+.info_col > * {
+  padding-bottom: 0.5rem;
 }
 .info_rating {
   display: flex;
@@ -62,6 +87,7 @@ ul {
 }
 .info_optional_ul {
   display: none;
+  padding-bottom: 0;
 }
 /* Buyout Col */
 .buyout_col {
@@ -73,22 +99,49 @@ ul {
 }
 .big_logo {
   display: none;
-  /* test */
-  color: blue;
+  font-weight: 800;
+  color: #323952;
+  font-size: 1.5rem;
+  padding: 1rem 0;
 }
 .small_logo {
-  /* test */
-  color: grey;
+  color: #5a5a5a;
+}
+.full_price {
+  color: red;
+  text-decoration: line-through;
+  font-weight: 800;
+  font-size: 1.7rem;
+}
+.discounted_price {
+  font-weight: 800;
+  font-size: 1.7rem;
 }
 /* Prices Col */
 .prices_col {
   order: 3;
+  display: flex;
+  justify-content: center;
 }
 .lg_prices_col {
   display: none;
+  text-align: center;
+}
+.lg_prices_col > * {
+  padding: 0.8rem 0;
+}
+.lg_prices_ul {
+  padding-top: 0;
+}
+.lg_prices_ul li {
+  padding-bottom: 0.5rem;
 }
 .mobile_prices_col {
   border-top: 1px solid grey;
+  text-align: center;
+}
+.lg_more_offer_section {
+  border-top: 1px solid #e0e0e0;
 }
 /* ------------- */
 /* -MEDIA QUERY- */
@@ -98,6 +151,9 @@ ul {
 @media screen and (min-width: 992px) {
   .trip_card {
     flex-direction: row;
+  }
+  .card_container {
+    padding-left: 1rem;
   }
   .card_columns {
     flex-direction: row;
@@ -115,14 +171,31 @@ ul {
     order: 2;
   }
   .img_container {
-    height: 100%;
+    height: auto;
     width: 25%;
+    max-height: 100%;
+  }
+  .card_container {
+    width: 75%;
   }
   .info_optional_ul {
     display: inline-block;
   }
   .buyout_prices_columns {
     flex-direction: column;
+  }
+  .buyout_prices {
+    align-self: center;
+    text-align: center;
+  }
+  .offer_btn_container {
+    align-self: center;
+    text-align: center;
+    width: 100%;
+  }
+  .offer_btn {
+    padding-left: 30%;
+    padding-right: 30%;
   }
   .big_logo {
     display: inline-block;
@@ -135,5 +208,8 @@ ul {
   }
   .lg_prices_col {
     display: inline-block;
+  }
+  .offer_btn_container {
+    margin: 1rem 0;
   }
 }
