@@ -1,0 +1,139 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* COMMON */
+.card_container {
+  width: 90%;
+  margin: 0 auto;
+}
+.trip_card {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+.card_columns {
+  display: flex;
+  flex-direction: column;
+}
+.card_col {
+  padding: 1rem;
+  /* Test */
+  border: 1px dotted red;
+}
+ul {
+  list-style-type: none;
+}
+.check_tick {
+  color: black;
+}
+/* CARD IMG */
+.img_container {
+  height: 30vh;
+  width: 100%;
+}
+.img_container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/* Info Col */
+.info_col {
+  order: 1;
+}
+.info_rating {
+  display: flex;
+}
+.squares {
+  display: flex;
+  justify-content: space-between;
+}
+.rating_square {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 0.3rem;
+  background-color: green;
+}
+.info_reviews {
+  display: inline-block;
+}
+.info_optional_ul {
+  display: none;
+}
+/* Buyout Col */
+.buyout_col {
+  order: 2;
+}
+.buyout_prices_columns {
+  display: flex;
+  justify-content: space-between;
+}
+.big_logo {
+  display: none;
+  /* test */
+  color: blue;
+}
+.small_logo {
+  /* test */
+  color: grey;
+}
+/* Prices Col */
+.prices_col {
+  order: 3;
+}
+.lg_prices_col {
+  display: none;
+}
+.mobile_prices_col {
+  border-top: 1px solid grey;
+}
+/* ------------- */
+/* -MEDIA QUERY- */
+/* ------------- */
+
+/* Da qui lg */
+@media screen and (min-width: 992px) {
+  .trip_card {
+    flex-direction: row;
+  }
+  .card_columns {
+    flex-direction: row;
+  }
+  .card_col {
+    width: calc(100% / 3);
+  }
+  .info_col {
+    order: 3;
+  }
+  .buyout_col {
+    order: 1;
+  }
+  .prices_col {
+    order: 2;
+  }
+  .img_container {
+    height: 100%;
+    width: 25%;
+  }
+  .info_optional_ul {
+    display: inline-block;
+  }
+  .buyout_prices_columns {
+    flex-direction: column;
+  }
+  .big_logo {
+    display: inline-block;
+  }
+  .small_logo {
+    display: none;
+  }
+  .mobile_prices_col {
+    display: none;
+  }
+  .lg_prices_col {
+    display: inline-block;
+  }
+}
